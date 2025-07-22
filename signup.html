@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  justify-content: space-between;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.left {
+  flex: 1;
+  padding: 40px;
+  max-width: 50%;
+}
+
+.logo {
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1em;
+  color: #333;
+}
+
+.footer-note {
+  margin-top: 60px;
+  font-size: 0.8em;
+  color: gray;
+}
+
+.right {
+  flex: 1;
+  max-width: 40%;
+  position: relative;
+  padding: 40px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-link {
+  text-align: right;
+  font-size: 0.9em;
+  margin-bottom: 20px;
+}
+
+.login-link a {
+  color: #007aff;
+  text-decoration: none;
+}
+
+.form-box h2 {
+  margin-bottom: 10px;
+}
+
+.input-group {
+  display: flex;
+  margin: 15px 0;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px 12px;
+  background-color: white;
+}
+
+.flag {
+  margin-right: 10px;
+  white-space: nowrap;
+}
+
+.input-group input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 1em;
+}
+
+.terms {
+  font-size: 0.8em;
+  color: #666;
+}
+
+.terms a {
+  color: #007aff;
+  text-decoration: none;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #d0d0d0;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: not-allowed;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="left">
+      <img src="/Image/signuplogo.svg" alt="Moniepoint Logo" class="logo">
+      <h1>Welcome to Moniepoint!</h1>
+      <p>Collect payments, access loans and manage operations with a business banking solution that meets all your needs.</p>
+      <p class="footer-note">
+        Moniepoint MFB is licensed by the <strong>Central Bank of Nigeria</strong>.<br>
+        All deposits are insured by the <strong>NDIC</strong>.
+      </p>
+    </div>
+
+    <div class="right">
+      <div class="login-link">Already have an account? <a href="#">Login</a></div>
+      <div class="form-box">
+        <h2>Setup a Profile</h2>
+        <p>Just enter your phone number to get started</p>
+        <div class="input-group">
+          <span class="flag">🇳🇬 +234</span>
+          <input type="tel" placeholder="Phone Number">
+        </div>
+        <p class="terms">
+          I agree to Moniepoint’s <a href="#">Terms and Conditions</a>, <a href="#">Privacy Policy</a> and <a href="#">Cookies Policy</a>
+        </p>
+        <button disabled>Continue</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

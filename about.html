@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        }
+        body{
+            font-family:'Segoe UI', sans-serif;
+            background-color: #fafdfe;
+        }
+        .navbar{
+        font-family: 'Segoe UI', sans-serif;
+        }
+        .navbar{
+        background-color: #ffffff;
+        display: flex;
+        padding: 20px 0;
+        justify-content: space-between;
+        color: #3e588e;
+        margin-left: 50px;
+        margin-top: 20px;
+        font-size: 10px;
+        margin-left: 5px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        top: -20px;
+        left: -5px;
+      }
+      .navbar .leftcontent{
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        margin-left: 50px;
+      }
+      .navbar .leftcontent img{
+        width: 150px;
+        height: 40px;
+      }
+      .navbar  .leftcontent .image{
+        width: 1px;
+      }
+      .navbar .rightcontent{
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        margin-right: 30px;
+      }
+      .navbar .rightcontent button{
+        width: 100px;
+        height: 40px;
+        border-radius: 30px;
+        background-color: #c4e9fd;
+        border: #c4e9fd;
+        color:#0055b4;
+      }
+      @media (max-width:768px) {
+        .navbar .rightcontent{
+          display: none;
+        }
+        .navbar{
+          display: block;
+        }
+        .navbar .leftcontent img{
+          display: flex;
+        }
+        .navbar .leftcontent .text{
+          margin-right: 80px;
+        }
+        .navbar .leftcontent .text{
+            display: none;
+        }
+      }
+
+      /* Hero-Section */
+      .Hero {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #edf8fe;
+    background-image: url(/Image/hero.svg);
+    color: #333;
+    border-radius: 100px;
+}
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+.container .about-us-button {
+    background-color: #f7d5c9;
+    color: #a0522d;
+    padding: 8px 15px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.container h1{
+    font-size: 3em;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.container h1 .blue {
+    color: #4169e1;
+}
+
+.container h1 .dark {
+    color: #333;
+    display: block;
+    font-size: 0.85em;
+}
+
+
+
+/* Who We Are */
+.who-we-are{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: #092256;
+    padding: 20px;
+}
+.who-we-are .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px; 
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.who-we-are .who-we-are-section,
+.history-section {
+    flex: 1;
+}
+
+.who-we-are h2 {
+    font-size: 2em;
+    color: #092256;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.who-we-are .who-we-are-section p,
+.history-section p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.who-we-are .moniepoint-banner {
+    background-image: url(/Image/shape.svg);
+    background-color: #092256;
+    color: #ffffff;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.8em;
+    line-height: 1.4;
+    font-weight: bold;
+}
+
+.who-we-are .moniepoint-banner p {
+    margin: 0;
+}
+
+
+/* Split-Section */
+.split{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0d1a3c;
+    color: #ffffff;
+}
+
+.split-section {
+    display: flex;
+    min-height: 100vh; 
+}
+
+.left-content {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5%; 
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.left-content h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    color: #ffffff;
+}
+
+.left-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+.right-image {
+    flex: 1;
+    background-color: #000; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+}
+
+.right-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block; 
+}
+
+/*Responsiveness */
+@media (max-width: 768px) {
+    .split-section {
+        flex-direction: column;
+    }
+
+    .left-content, .right-image {
+        flex: none; 
+        width: 100%;
+        padding: 20px;
+    }
+
+    .left-content {
+        text-align: center;
+    }
+
+    .left-content h2 {
+        font-size: 2.2em;
+    }
+
+    .right-image {
+        min-height: 300px; 
+    }
+}
+
+/* Insidethenews */
+.Insidethenews{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f0f2f5; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.Insidethenews .text{
+    color: #03213f;
+}
+.Insidethenews .news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.Insidethenews .news-item {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.Insidethenews .news-item img {
+    width: 100%;
+    height: 180px; 
+    object-fit: cover;
+    display: block;
+}
+
+.Insidethenews .news-item h3 {
+    font-size: 1.1em;
+    padding: 15px;
+    margin: 0;
+    color: #03213f;
+    line-height: 1.4;
+    font-weight: bold;
+}
+
+/* Responsive*/
+@media (max-width: 768px) {
+    .news-grid {
+        grid-template-columns: 1fr; 
+    }
+}
+
+/* Account-section */
+.Account .hero-section {
+    background-image: url(/Image/ctaL.svg);
+    background-color: #0351df;
+    color: #ffffff;
+    text-align: center;
+    padding: 80px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.Account .main-text {
+    font-size: 2.5em; 
+    margin-bottom: 10px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.Account .sub-text {
+    font-size: 1.2em; 
+    margin-bottom: 30px;
+}
+
+.Account .create-account-button {
+    background-color: #ffffff;
+    color: #2143ea;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.Account .create-account-button:hover {
+    background-color: #e0e0e0;
+}
+
+.Account .create-account-button .arrow {
+    font-size: 1.2em;
+}
+/* Responsiveness */
+@media (max-width: 768px) {
+    .Account .main-text {
+        font-size: 1.8em;
+    }
+
+    .Account .sub-text {
+        font-size: 1em;
+    }
+
+    .Account .create-account-button {
+        padding: 12px 25px;
+        font-size: 0.9em;
+    }
+}
+
+/* Footer-Section */
+.footer {
+  background-color: #030b1d;
+  color: white;
+  padding: 50px 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+}
+
+.footer-left {
+  flex: 1 1 250px;
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 15px;
+}
+
+.footer-left p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.app-buttons img {
+  width: 130px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.address {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.footer-links {
+  display: flex;
+  flex: 2 1 600px;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.column {
+  min-width: 160px;
+}
+
+.column h4 {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.column ul li {
+  margin-bottom: 8px;
+}
+
+.column ul li a {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.column ul li a:hover {
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-links {
+    flex-direction: column;
+  }
+}
+    </style>
+</head>
+<body>
+    <header class="navbar">
+    <div class="leftcontent">
+      <img src="/Image/bluemoniepoint.png" alt="">
+      <div class="text"><h1>Business</h1></div>
+      <div class="text"><h1>Personal</h1></div>
+    </div>
+
+    <div class="rightcontent">
+      <div class="products"><h1>products</h1></div>
+      <div class="Company"><h1>Company</h1></div>
+      <div class="About"><button>About</button></div>
+      <div class="Contact"><h1>Contact</h1></div>
+      <div class="Blog"><h1>Blog</h1></div>
+      <div class="signin"><button>Sign in</button></div>
+      <img src="./Image/nig.svg" alt="">
+    </div>
+  </header>
+  
+  <!-- Hero Section -->
+   <section class="Hero">
+      <div class="container">
+    <div class="about-us-button">About us</div>
+    <h1><span class="blue">Powering dreams across</span> <span class="dark">Nigeria</span></h1>
+    </div>
+   </section>
+
+
+    <!-- Who We Are -->
+     <Section class="who-we-are">
+         <div class="content-wrapper">
+        <div class="who-we-are-section">
+            <h2>Who we are</h2>
+            <p>Moniepoint MFB is a Central Bank of Nigeria (CBN)-regulated microfinance bank serving businesses and individuals across Nigeria. Our solutions power millions of small and medium-sized businesses, organisations, and retail users with access to banking and credit services.</p>
+        </div>
+
+        <div class="history-section">
+            <p>Moniepoint MFB received its license in February 2022 and helps over 10 million people and businesses with banking, access to credit and business management tools.</p>
+            <p>In August 2023, we launched our Personal banking product to further help the businesses that use our products, by banking their customers and employees. Through this product, individual users can get reliable credit as well as bank accounts for transfers and bill payments.</p>
+        </div>
+    </div>
+
+    <div class="moniepoint-banner">
+        <p>Moniepoint provides over 10 million people and businesses across Nigeria with access to banking, credit and business management tools.</p>
+    </div>
+     </Section>
+
+    <!-- Split-Section -->
+     <section class="split">
+        <div class="split-section">
+        <div class="left-content">
+            <h2>Awesome people building for people</h2>
+            <p>Moniepoint Microfinance Bank is run by a team of veteran bankers and technologists working to provide the most seamless and secure experience for everyone using our platform.</p>
+        </div>
+        <div class="right-image">
+            <img src="/Image/people.jpg" alt="Group of people celebrating">
+        </div>
+    </div>
+     </section>
+
+     <!-- Insidethenews -->
+      <Section class="Insidethenews">
+        <div class="news-grid">
+        <div class="news-item">
+            <img src="/Image/mirrorgooggle.jpg" alt="Man in glasses">
+            <h3>Moniepoint taps Stanbic IBTC CFO for its microfinance bank after $110 million raise</h3>
+        </div>
+        <div class="news-item">
+            <img src="/Image/googlemirror.jpg" alt="Google logo">
+            <h3>Google among investors putting $110 million into Nigeria's Moniepoint</h3>
+        </div>
+        <div class="news-item">
+            <img src="/Image/moniepointvevrve.jpg" alt="Moniepoint card">
+            <h3>Nigeria-based 'unicorn' status</h3>
+        </div>
+    </div>
+      </Section>
+
+      <!-- Account-Section -->
+      <Section class="Account">
+        <div class="hero-section">
+        <p class="main-text">We're powering the dreams of millions of businesses.</p>
+        <p class="sub-text">Let's power yours too.</p>
+        <button class="create-account-button">Create an account <span class="arrow">&rarr;</span></button>
+    </div>
+      </Section>
+
+       <!-- Footer-Section -->
+  <footer class="footer">
+    <div class="footer-container">
+
+      <!-- Left: Logo and Disclaimer -->
+      <div class="footer-left">
+        <img src="/Image/Moniepoint.png" alt="Moniepoint Logo" class="logo">
+        <p>
+          Moniepoint Microfinance Bank Limited is authorised and regulated by the Central Bank of Nigeria to offer banking services. Deposits are insured by the Nigerian Deposit Insurance Corporation (NDIC).
+        </p>
+
+        <div class="app-buttons">
+          <a href="#"><img src="/Image/apple (1).svg" alt="App Store"></a>
+          <a href="#"><img src="/Image/playstore (1).svg" alt="Google Play"></a>
+        </div>
+
+        <p class="address">Plot 7A, Block 4,</p>
+      </div>
+
+      <!-- Link Columns -->
+      <div class="footer-links">
+        <div class="column">
+          <h4>For Business</h4>
+          <ul>
+            <li><a href="#">Business Account</a></li>
+            <li><a href="#">Point of Sale Terminal</a></li>
+            <li><a href="#">Loan</a></li>
+            <li><a href="#">Expense Card</a></li>
+            <li><a href="#">Moniebook</a></li>
+          </ul>
+        </div>
+
+        <div class="column">
+          <h4>For Personal</h4>
+          <ul>
+            <li><a href="#">Instant Debit Card</a></li>
+            <li><a href="#">Personal Account</a></li>
+            <li><a href="#">Payment</a></li>
+            <li><a href="#">Personal Banking</a></li>
+          </ul>
+        </div>
+
+        <div class="column">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Culture</a></li>
+            <li><a href="#">Join Our Team</a></li>
+            <li><a href="#">Press & Media</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="column">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Moniepoint Blog</a></li>
+            <li><a href="#">Help Centre</a></li>
+            <li><a href="#">Learning Centre</a></li>
+            <li><a href="#">Whistleblower Policy</a></li>
+            <li><a href="#">IMS Policy</a></li>
+            <li><a href="#">Report a Vulnerability</a></li>
+            <li><a href="#">Informal Economy Report</a></li>
+            <li><a href="#">Security Trust Center</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+</body>
+</html>
